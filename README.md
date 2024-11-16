@@ -1,9 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////  
-Author: Tristan Traver  
-Date: 2024-11-11  
-Version: 1.0  
-////////////////////////////////////////////////////////////////////////////////  
-
 Project Description  
 This program was designed and tested using Arduino IDE for the ESP32C6 and works with LEDfx (https://docs.ledfx.app/en/latest/index.html), an open-source project for controlling LED strips via Art-Net and other protocols.  
 

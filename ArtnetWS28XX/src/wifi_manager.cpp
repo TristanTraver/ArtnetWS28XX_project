@@ -9,12 +9,6 @@
 #include "wifi_manager.h"
 
 ////////////////////////////////////////////////////////////////////////////////
-// Static ip setting
-IPAddress local_IP(192, 168, 1, 245);      // static IP
-IPAddress gateway(192, 168, 1, 1);         // Gateway
-IPAddress subnet(255, 255, 255, 0);        // Subnet mask
-
-////////////////////////////////////////////////////////////////////////////////
 // Server port configuration
 WebServer server(80);
 
@@ -34,12 +28,6 @@ bool setupWiFi()
     password = preferences.getString("password", "");
 
     if (ssid == "") return false;
-
-    // Static IP configuration before WIFI 
-    if (!WiFi.config(local_IP, gateway, subnet)) {
-        Serial.println("Error configuring static IP.");
-        return false;
-    }
 
     WiFi.begin(ssid.c_str(), password.c_str());
     WiFi.setSleep(false);

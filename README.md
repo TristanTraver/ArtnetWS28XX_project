@@ -17,15 +17,14 @@ To add additional universes, change the data pin, or modify the number of LEDs o
 - led_control.h  
 - led_control.cpp  
 
-Connection Procedure:  
-At startup, the program will attempt to connect to the last saved Wi-Fi network. If the connection fails, it will create an Access Point. To configure it:  
-- Connect to the ESP32_AP network.  
-- Go to the page 192.168.4.1.  
-- Enter your Wi-Fi credentials and submit the form.  
+Connection Procedure:   
+At startup, the program will attempt to connect to the last saved Wi-Fi network. If the connection fails, it will create an Access Point. To configure it:   
 
-Static IP:  
-The default configured static IP is 192.168.4.245. This IP is often outside the range of IP addresses assigned by most routers, so it is likely available.
-For safety, it's recommended to check your router settings and configure the static IP there. If you need to change it, modify the wifi_manager.cpp file.  
+- Connect to the ESP32_AP network.  
+- Go to the page 192.168.4.1.   
+- Enter your Wi-Fi credentials and submit the form.
+
+Once connected, the router assigns an IP address to the ESP. This IP address is displayed as a message on the Serial Monitor. To ensure the IP remains the same at every startup, configure it as static in the router settings so that it is reserved for the ESP even when it is not connected to the network.
 
 Serial Output:  
 During execution, debug messages are available and can be viewed in the Serial Monitor of Arduino IDE.
